@@ -10,12 +10,56 @@
                 <li class="nav-item">
                     <a href="{{url('/')}}" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
-                        <p>
-                            Widgets
-                            <span class="right badge badge-danger">New</span>
-                        </p>
+                        <p>Sections</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ route('user.view') }}" class="nav-link">
+                        <i class="nav-icon fas fa-user"></i>
+                        <p>Users</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        <i class="nav-icon fas fa-plane"></i>
+                        <p>
+                            Tours
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Tours List</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Custom Tours</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Armenian Tours</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+{{--                <li class="nav-item">--}}
+{{--                    <a href="{{url('/')}}" class="nav-link">--}}
+{{--                        <i class="nav-icon fas fa-plane"></i>--}}
+{{--                        <p>CUSTOM TOURS</p>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
+{{--                <li class="nav-item">--}}
+{{--                    <a href="{{url('/')}}" class="nav-link">--}}
+{{--                        <i class="nav-icon fas fa-plane"></i>--}}
+{{--                        <p></p>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
             </ul>
         </nav>
     </div>

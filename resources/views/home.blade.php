@@ -8,12 +8,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Projects</h1>
+                        <h1>Sections</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Projects</li>
+                            <li class="breadcrumb-item active">Sections</li>
                         </ol>
                     </div>
                 </div>
@@ -26,7 +26,7 @@
             <!-- Default box -->
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Projects</h3>
+                    <h3 class="card-title">Sections</h3>
                 </div>
                 <div class="card-body p-0">
                     <table class="table table-striped projects">
@@ -36,13 +36,13 @@
                                 #
                             </th>
                             <th style="width: 20%">
-                                Project Name
+                                Sections Name
                             </th>
                             <th style="width: 30%">
                                 Team Members
                             </th>
                             <th>
-                                Project Progress
+                                Created_At
                             </th>
                             <th style="width: 8%" class="text-center">
                                 Status
@@ -54,16 +54,12 @@
                         <tbody>
                         <tr>
                             <td>
-                                #
+                                1
                             </td>
                             <td>
                                 <a>
                                     AdminLTE v3
                                 </a>
-                                <br/>
-                                <small>
-                                    Created 01.01.2019
-                                </small>
                             </td>
                             <td>
                                 <ul class="list-inline">
@@ -81,14 +77,8 @@
                                     </li>
                                 </ul>
                             </td>
-                            <td class="project_progress">
-                                <div class="progress progress-sm">
-                                    <div class="progress-bar bg-green" role="progressbar" aria-valuenow="57" aria-valuemin="0" aria-valuemax="100" style="width: 57%">
-                                    </div>
-                                </div>
-                                <small>
-                                    57% Complete
-                                </small>
+                            <td class="created_at">
+                                01.01.2019
                             </td>
                             <td class="project-state">
                                 <span class="badge badge-success">Success</span>
@@ -113,16 +103,12 @@
                         </tr>
                         <tr>
                             <td>
-                                #
+                                2
                             </td>
                             <td>
                                 <a>
                                     AdminLTE v3
                                 </a>
-                                <br/>
-                                <small>
-                                    Created 01.01.2019
-                                </small>
                             </td>
                             <td>
                                 <ul class="list-inline">
@@ -134,14 +120,8 @@
                                     </li>
                                 </ul>
                             </td>
-                            <td class="project_progress">
-                                <div class="progress progress-sm">
-                                    <div class="progress-bar bg-green" role="progressbar" aria-valuenow="47" aria-valuemin="0" aria-valuemax="100" style="width: 47%">
-                                    </div>
-                                </div>
-                                <small>
-                                    47% Complete
-                                </small>
+                            <td class="created_at">
+                                01.11.2021
                             </td>
                             <td class="project-state">
                                 <span class="badge badge-success">Success</span>
@@ -166,16 +146,12 @@
                         </tr>
                         <tr>
                             <td>
-                                #
+                                3
                             </td>
                             <td>
                                 <a>
                                     AdminLTE v3
                                 </a>
-                                <br/>
-                                <small>
-                                    Created 01.01.2019
-                                </small>
                             </td>
                             <td>
                                 <ul class="list-inline">
@@ -190,14 +166,8 @@
                                     </li>
                                 </ul>
                             </td>
-                            <td class="project_progress">
-                                <div class="progress progress-sm">
-                                    <div class="progress-bar bg-green" role="progressbar" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100" style="width: 77%">
-                                    </div>
-                                </div>
-                                <small>
-                                    77% Complete
-                                </small>
+                            <td class="created_at">
+                                 08.01.2020
                             </td>
                             <td class="project-state">
                                 <span class="badge badge-success">Success</span>
@@ -222,16 +192,12 @@
                         </tr>
                         <tr>
                             <td>
-                                #
+                                4
                             </td>
                             <td>
                                 <a>
                                     AdminLTE v3
                                 </a>
-                                <br/>
-                                <small>
-                                    Created 01.01.2019
-                                </small>
                             </td>
                             <td>
                                 <ul class="list-inline">
@@ -249,14 +215,8 @@
                                     </li>
                                 </ul>
                             </td>
-                            <td class="project_progress">
-                                <div class="progress progress-sm">
-                                    <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                    </div>
-                                </div>
-                                <small>
-                                    60% Complete
-                                </small>
+                            <td class="created_at">
+                                08.07.2020
                             </td>
                             <td class="project-state">
                                 <span class="badge badge-success">Success</span>
@@ -281,16 +241,12 @@
                         </tr>
                         <tr>
                             <td>
-                                #
+                                5
                             </td>
                             <td>
                                 <a>
                                     AdminLTE v3
                                 </a>
-                                <br/>
-                                <small>
-                                    Created 01.01.2019
-                                </small>
                             </td>
                             <td>
                                 <ul class="list-inline">
@@ -305,14 +261,8 @@
                                     </li>
                                 </ul>
                             </td>
-                            <td class="project_progress">
-                                <div class="progress progress-sm">
-                                    <div class="progress-bar bg-green" role="progressbar" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100" style="width: 12%">
-                                    </div>
-                                </div>
-                                <small>
-                                    12% Complete
-                                </small>
+                            <td class="created_at">
+                                21.07.2019
                             </td>
                             <td class="project-state">
                                 <span class="badge badge-success">Success</span>
@@ -337,17 +287,12 @@
                         </tr>
                         <tr>
                             <td>
-                                #
+                                6
                             </td>
                             <td>
                                 <a>
                                     AdminLTE v3
                                 </a>
-                                <br/>
-                                <small>
-                                    Created 01.01.2019
-                                </small>
-                            </td>
                             <td>
                                 <ul class="list-inline">
                                     <li class="list-inline-item">
@@ -364,14 +309,8 @@
                                     </li>
                                 </ul>
                             </td>
-                            <td class="project_progress">
-                                <div class="progress progress-sm">
-                                    <div class="progress-bar bg-green" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 35%">
-                                    </div>
-                                </div>
-                                <small>
-                                    35% Complete
-                                </small>
+                            <td class="created_at">
+                                20.08.2018
                             </td>
                             <td class="project-state">
                                 <span class="badge badge-success">Success</span>
@@ -396,16 +335,12 @@
                         </tr>
                         <tr>
                             <td>
-                                #
+                                7
                             </td>
                             <td>
                                 <a>
                                     AdminLTE v3
                                 </a>
-                                <br/>
-                                <small>
-                                    Created 01.01.2019
-                                </small>
                             </td>
                             <td>
                                 <ul class="list-inline">
@@ -417,14 +352,8 @@
                                     </li>
                                 </ul>
                             </td>
-                            <td class="project_progress">
-                                <div class="progress progress-sm">
-                                    <div class="progress-bar bg-green" role="progressbar" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100" style="width: 87%">
-                                    </div>
-                                </div>
-                                <small>
-                                    87% Complete
-                                </small>
+                            <td class="created_at">
+                                19.04.2019
                             </td>
                             <td class="project-state">
                                 <span class="badge badge-success">Success</span>
@@ -449,16 +378,12 @@
                         </tr>
                         <tr>
                             <td>
-                                #
+                                8
                             </td>
                             <td>
                                 <a>
                                     AdminLTE v3
                                 </a>
-                                <br/>
-                                <small>
-                                    Created 01.01.2019
-                                </small>
                             </td>
                             <td>
                                 <ul class="list-inline">
@@ -473,14 +398,8 @@
                                     </li>
                                 </ul>
                             </td>
-                            <td class="project_progress">
-                                <div class="progress progress-sm">
-                                    <div class="progress-bar bg-green" role="progressbar" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100" style="width: 77%">
-                                    </div>
-                                </div>
-                                <small>
-                                    77% Complete
-                                </small>
+                            <td class="created_at">
+                             17.05.2022
                             </td>
                             <td class="project-state">
                                 <span class="badge badge-success">Success</span>
@@ -511,10 +430,6 @@
                                 <a>
                                     AdminLTE v3
                                 </a>
-                                <br/>
-                                <small>
-                                    Created 01.01.2019
-                                </small>
                             </td>
                             <td>
                                 <ul class="list-inline">
@@ -532,14 +447,8 @@
                                     </li>
                                 </ul>
                             </td>
-                            <td class="project_progress">
-                                <div class="progress progress-sm">
-                                    <div class="progress-bar bg-green" role="progressbar" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100" style="width: 77%">
-                                    </div>
-                                </div>
-                                <small>
-                                    77% Complete
-                                </small>
+                            <td class="created_at">
+                              15.07.2021
                             </td>
                             <td class="project-state">
                                 <span class="badge badge-success">Success</span>
