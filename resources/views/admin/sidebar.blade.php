@@ -48,18 +48,24 @@
                         </li>
                     </ul>
                 </li>
-{{--                <li class="nav-item">--}}
-{{--                    <a href="{{url('/')}}" class="nav-link">--}}
-{{--                        <i class="nav-icon fas fa-plane"></i>--}}
-{{--                        <p>CUSTOM TOURS</p>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
-{{--                <li class="nav-item">--}}
-{{--                    <a href="{{url('/')}}" class="nav-link">--}}
-{{--                        <i class="nav-icon fas fa-plane"></i>--}}
-{{--                        <p></p>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
+                <li class="nav-item">
+                    <a href="{{ route('user.view') }}" class="nav-link">
+                        <i class="nav-icon fas fa-hotel"></i>
+                        <p>Hotel</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('user.view') }}" class="nav-link">
+                        <i class="nav-icon fas fa-cart-plus"></i>
+                        <p>Order</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('user.view') }}" class="nav-link">
+                        <i class="nav-icon fas fa-money-bill"></i>
+                        <p>Transfers</p>
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>
