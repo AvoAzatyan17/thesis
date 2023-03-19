@@ -8,62 +8,45 @@
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item">
-                    <a href="{{url('/')}}" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
-                        <p>Sections</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ route('user.view') }}" class="nav-link">
+                    <a href="{{ route('admin.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-user"></i>
-                        <p>Users</p>
+                        <p>Admins</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link">
+                    <a href="{{ route('admin.index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>Managers</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-coins"></i>
+                        <p>Accounting</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-plane"></i>
-                        <p>
-                            Tours
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Tours List</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Custom Tours</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Armenian Tours</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ route('user.view') }}" class="nav-link">
-                        <i class="nav-icon fas fa-hotel"></i>
-                        <p>Hotel</p>
+                        <p>Tours</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('user.view') }}" class="nav-link">
-                        <i class="nav-icon fas fa-cart-plus"></i>
-                        <p>Order</p>
+                    <a href="{{ route('admin.index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-suitcase"></i>
+                        <p>Traveler</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('user.view') }}" class="nav-link">
-                        <i class="nav-icon fas fa-money-bill"></i>
-                        <p>Transfers</p>
+                    <a href="{{ route('admin.index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-comments"></i>
+                        <p>Chat</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-history"></i>
+                        <p>History</p>
                     </a>
                 </li>
             </ul>
