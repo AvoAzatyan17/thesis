@@ -2,27 +2,21 @@
 
 namespace App\Providers;
 
+use App\Services\Contracts\UserCrudInterface;
+use App\Services\CrudService\CrudRepository;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Pagination\Paginator;
 
 class AppServiceProvider extends ServiceProvider
 {
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
-    public function register()
+    public function register(): void
     {
         //
     }
 
-    /**
-     * Bootstrap any application services.
-     *
-     * @return void
-     */
-    public function boot()
+    public function boot(): void
     {
-        //
+        Paginator::useBootstrap();
+        $this->app->bind(UserCrudInterface::class, CrudRepository::class);
     }
 }

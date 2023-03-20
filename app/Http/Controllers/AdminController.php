@@ -2,81 +2,59 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
-use Illuminate\Http\Request;
+use App\Http\Requests\Admin\AdminStoreRequest;
+use App\Services\Contracts\UserCrudInterface;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
 
 class AdminController extends Controller
 {
+    private UserCrudInterface $userCrud;
+
+    public function __construct(UserCrudInterface $userCrud)
+    {
+        $this->userCrud = $userCrud;
+    }
+
     public function index(): View
     {
-        $users = User::query()->orderBy('id','desc')->where('user_type', '=', 1)->get();
+        $users = $this->userCrud->list();
         return view('/user/list', compact('users'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function create(): View
     {
-        //
+        return view('/user/create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function store(AdminStoreRequest $request): RedirectResponse
     {
-        //
+        $user = $this->userCrud->store($request->all());
+        return redirect(route('admin.show', $user->id))->with("user", $user);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+    public function show(int $id): View
     {
-        //
+        $user = $this->userCrud->show($id);
+        return view('/user/show', compact('user'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+    public function edit(int $id): View
     {
-        //
+        $user = $this->userCrud->edit($id);
+        return view('/user/edit', compact('user'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+    public function update(AdminStoreRequest $request, int $id): RedirectResponse
     {
-        //
+        $user = $this->userCrud->update($request->all(), $id);
+        return redirect(route('admin.show', $user->id))->with("user", $user);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
+
+    public function destroy(int $id): RedirectResponse
     {
-        //
+        $user = $this->userCrud->delete($id);
+        return redirect(route('admin.index'));
     }
 }

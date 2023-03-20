@@ -26,7 +26,7 @@
                     <div class="card">
                         <div class="card-header">
                             <div class="card-tools">
-                                <a href="" class="btn btn-primary">Create</a>
+                                <a href="{{ route('admin.create') }}" class="btn btn-primary">Create</a>
                             </div>
                             <div class="card-body table-responsive p-0">
                                 <table class="table table-hover text-nowrap">
@@ -57,19 +57,19 @@
                                                 @endif
                                             </td>
                                             <td class="project-actions">
-                                                <a class="btn btn-success btn-sm" href="#" title="View">
+                                                <a class="btn btn-success btn-sm" href="#" title="Chat">
                                                     <i class="fas fa-envelope">
                                                     </i>
                                                 </a>
-                                                <a class="btn btn-warning btn-sm" href="#" title="View">
+                                                <a class="btn btn-warning btn-sm" href="{{ route("admin.show", $user->id) }}" title="Show">
                                                     <i class="fas fa-eye">
                                                     </i>
                                                 </a>
-                                                <a class="btn btn-info btn-sm" href="#" title="Edit">
+                                                <a class="btn btn-info btn-sm" href="{{ route("admin.edit", $user->id) }}" title="Edit">
                                                     <i class="fas fa-pencil-alt">
                                                     </i>
                                                 </a>
-                                                <a class="btn btn-danger btn-sm" href="#" title="Delete">
+                                                <a class="btn btn-danger btn-sm" href="{{ route("admin.destroy", $user->id) }}" title="Delete">
                                                     <i class="fas fa-trash">
                                                     </i>
                                                 </a>
@@ -84,6 +84,7 @@
                         <!-- /.card -->
                     </div>
                 </div>
+            </div>
         </section>
     </div>
 </div>
