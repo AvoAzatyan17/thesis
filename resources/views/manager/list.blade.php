@@ -8,12 +8,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Admins</h1>
+                        <h1>Managers</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Admin</li>
+                            <li class="breadcrumb-item active">Managers</li>
                         </ol>
                     </div>
                 </div>
@@ -26,7 +26,7 @@
                     <div class="card">
                         <div class="card-header">
                             <div class="card-tools">
-                                <a href="{{ route('admin.create') }}" class="btn btn-primary">Create</a>
+                                <a href="{{ route('manager.create') }}" class="btn btn-primary">Create</a>
                             </div>
                             <div class="card-body table-responsive p-0">
                                 <table class="table table-hover text-nowrap">
@@ -61,21 +61,21 @@
                                                     <i class="fas fa-envelope">
                                                     </i>
                                                 </a>
-                                                <a class="btn btn-warning btn-sm" href="{{ route("admin.show", $user->id) }}" title="Show">
+                                                <a class="btn btn-warning btn-sm" href="{{ route("manager.show", $user->id) }}" title="Show">
                                                     <i class="fas fa-eye">
                                                     </i>
                                                 </a>
-                                                <a class="btn btn-info btn-sm" href="{{ route("admin.edit", $user->id) }}" title="Edit">
+                                                <a class="btn btn-info btn-sm" href="{{ route("manager.edit", $user->id) }}" title="Edit">
                                                     <i class="fas fa-pencil-alt">
                                                     </i>
                                                 </a>
                                                 <a class="btn btn-danger btn-sm"
-                                                    href="{{ route('admin.destroy',$user->id) }}"
-                                                    onclick="event.preventDefault();
+                                                   href="{{ route('manager.destroy',$user->id) }}"
+                                                   onclick="event.preventDefault();
                                                     document.getElementById('delete-form-{{ $user->id }}').submit();">
                                                     <i class="fas fa-trash"></i>
                                                 </a>
-                                                <form id="delete-form-{{ $user->id }}" action="{{ route('admin.destroy',$user->id) }}"
+                                                <form id="delete-form-{{ $user->id }}" action="{{ route('manager.destroy',$user->id) }}"
                                                       method="POST" style="display: none;">
                                                     @csrf
                                                     @method("DELETE")

@@ -2,8 +2,10 @@
 
 namespace App\Providers;
 
+use App\Services\Contracts\ManagerCrudInterface;
 use App\Services\Contracts\UserCrudInterface;
 use App\Services\CrudService\CrudRepository;
+use App\Services\CrudService\ManagerRepositery;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
 
@@ -18,5 +20,6 @@ class AppServiceProvider extends ServiceProvider
     {
         Paginator::useBootstrap();
         $this->app->bind(UserCrudInterface::class, CrudRepository::class);
+        $this->app->bind(ManagerCrudInterface::class, ManagerRepositery::class);
     }
 }

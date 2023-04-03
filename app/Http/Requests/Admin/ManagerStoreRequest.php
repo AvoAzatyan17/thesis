@@ -5,7 +5,7 @@ namespace App\Http\Requests\Admin;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Hash;
 
-class AdminStoreRequest extends FormRequest
+class ManagerStoreRequest extends FormRequest
 {
     public function authorize(): bool
     {
@@ -20,6 +20,7 @@ class AdminStoreRequest extends FormRequest
             'email' =>  'required|email',
             'lang' =>  'required',
             'status' =>  'required',
+            'admin_id' => 'integer'
         ];
     }
 
@@ -29,7 +30,7 @@ class AdminStoreRequest extends FormRequest
         $this->merge([
             'password' => $pass,
             'password_confirmation' => $pass,
-            'user_type' => 1,
+            'user_type' => 2,
         ]);
     }
 }

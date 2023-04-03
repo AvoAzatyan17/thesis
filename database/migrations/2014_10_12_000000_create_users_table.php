@@ -13,6 +13,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('status');
             $table->integer('user_type');
+            $table->integer('admin_id')->nullable();
             $table->string('lang');
             $table->string('phone');
             $table->string('email')->unique();

@@ -18,7 +18,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('admin.index') }}" class="nav-link">
+                    <a href="{{ route('manager.index') }}" class="nav-link @if($slug['1'] == 'manager') active @endif">
                         <i class="nav-icon fas fa-users"></i>
                         <p>Managers</p>
                     </a>
@@ -42,7 +42,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('admin.index') }}" class="nav-link">
+                    <a href="{{ route('chat') }}" class="nav-link @if($slug['1'] == 'chat') active @endif">
                         <i class="nav-icon fas fa-comments"></i>
                         <p>Chat</p>
                     </a>
