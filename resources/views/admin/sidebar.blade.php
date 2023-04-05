@@ -24,7 +24,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('admin.index') }}" class="nav-link">
+                    <a href="{{ route('accounting.index') }}" class="nav-link @if($slug['1'] == 'accounting') active @endif">
                         <i class="nav-icon fas fa-coins"></i>
                         <p>Accounting</p>
                     </a>
