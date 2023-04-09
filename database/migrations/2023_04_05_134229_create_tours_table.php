@@ -10,6 +10,13 @@ return new class extends Migration
     {
         Schema::create('tours', function (Blueprint $table) {
             $table->id();
+            $table->string('start_country');
+            $table->string('end_country');
+            $table->dateTime('start_date');
+            $table->dateTime('end_date');
+            $table->integer('count');
+            $table->text('description');
+            $table->boolean('status')->default(true);
             $table->timestamps();
         });
     }

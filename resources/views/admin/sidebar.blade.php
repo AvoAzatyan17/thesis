@@ -30,7 +30,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('admin.index') }}" class="nav-link">
+                    <a href="{{ route('tours.index') }}" class="nav-link @if($slug['1'] == 'tours') active @endif">
                         <i class="nav-icon fas fa-plane"></i>
                         <p>Tours</p>
                     </a>

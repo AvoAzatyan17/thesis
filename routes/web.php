@@ -3,6 +3,7 @@
 use App\Http\Controllers\AccountingController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ManagerController;
+use App\Http\Controllers\ToursController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -16,4 +17,5 @@ Route::resource('admin', AdminController::class);
 Route::get("/chat", [HomeController::class, 'chat'])->name('chat');
 Route::resource('manager', ManagerController::class);
 Route::resource('accounting', AccountingController::class);
+Route::resource('tours', ToursController::class);
 
