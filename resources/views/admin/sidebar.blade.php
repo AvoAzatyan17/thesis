@@ -36,9 +36,9 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('admin.index') }}" class="nav-link">
+                    <a href="{{ route('travelers.index') }}" class="nav-link @if($slug['1'] == 'travelers') active @endif">
                         <i class="nav-icon fas fa-suitcase"></i>
-                        <p>Traveler</p>
+                        <p>Travelers</p>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -47,12 +47,12 @@
                         <p>Chat</p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="{{ route('admin.index') }}" class="nav-link">
-                        <i class="nav-icon fas fa-history"></i>
-                        <p>History</p>
-                    </a>
-                </li>
+{{--                <li class="nav-item">--}}
+{{--                    <a href="{{ route('admin.index') }}" class="nav-link">--}}
+{{--                        <i class="nav-icon fas fa-history"></i>--}}
+{{--                        <p>History</p>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
             </ul>
         </nav>
     </div>

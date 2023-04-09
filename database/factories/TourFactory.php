@@ -13,6 +13,7 @@ class TourFactory extends Factory
     public function definition(): array
     {
         return [
+            'name' => fake()->jobTitle(),
             'start_country' => fake()->city(),
             'end_country' => fake()->city(),
             'start_date' => fake()->dateTimeThisMonth()->format('Y-m-d'),
