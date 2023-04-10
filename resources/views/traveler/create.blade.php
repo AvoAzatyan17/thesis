@@ -46,54 +46,38 @@
                                             @error('phone')
                                             <p class="w-100 text-danger">{{ $message }}</p>
                                             @enderror
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="Language">Language</label>
-                                                        <select class="custom-select rounded-0" id="Language" name="lang">
-                                                            <option style="display:none;" selected value="">Choose Language</option>
-                                                            <option value="en">English</option>
-                                                            <option value="fr">France</option>
-                                                            <option value="hy">Armenian</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="Status">Status</label>
-                                                        <select class="custom-select rounded-0" id="Status" name="status">
-                                                            <option style="display:none;" selected value="">Choose Status</option>
-                                                            <option value="active">Active</option>
-                                                            <option value="blocked">Blocked</option>
-                                                            <option value="waiting">Waiting</option>admins
-                                                        </select>
-                                                    </div>
-                                                </div>
+                                            <div class="form-group">
+                                                <label for="Paid">Paid</label>
+                                                <select class="custom-select rounded-0" id="Paid" name="paid">
+                                                    <option style="display:none;" selected value="">Choose Paid</option>
+                                                    <option value="1">Yes</option>
+                                                    <option value="0">No</option>
+                                                </select>
                                             </div>
-                                        </div>
+                                            </div>
+
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label for="exampleInputEmail1">Email address</label>
-                                                <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" autocomplete="new-password">
+                                                <label for="Passport">Passport</label>
+                                                <input type="text" name="passport" class="form-control" id="Passport" placeholder="Passport" autocomplete="new-password">
                                             </div>
-                                            @error('email')
-                                            <p class="w-100 text-danger">{{ $message }}</p>
-                                            @enderror
                                             <div class="form-group">
-                                                <label for="exampleInputPassword1">Password</label>
-                                                <input autocomplete="new-password" name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                                <label for="Paid">Paid</label>
+                                                <select class="custom-select rounded-0" id="Paid" name="paid">
+                                                    <option style="display:none;" selected value="">Choose Tour</option>
+                                                    @foreach($tours as $tour)
+                                                        <option value="{{$tour->id}}">{{$tour->name}}</option>
+                                                    @endforeach
+                                                </select>
                                             </div>
-                                            @error('password')
-                                            <p class="w-100 text-danger">{{ $message }}</p>
-                                            @enderror
                                             <div class="form-group">
-                                                <label for="ConfirmPassword">Confirm Password</label>
-                                                <input autocomplete="off" type="password" name="password_confirmation" step="1"
-                                                       class="form-control" id="password_confirmation" placeholder="Confirm Password">
+                                                <label for="Status">Status</label>
+                                                <select class="custom-select rounded-0" id="Status" name="status">
+                                                    <option style="display:none;" selected value="">Choose Status</option>
+                                                    <option value="1">Active</option>
+                                                    <option value="0">Blocked</option>
+                                                </select>
                                             </div>
-                                            @error('password_confirmation')
-                                            <p class="w-100 text-danger">{{ $message }}</p>
-                                            @enderror
                                         </div>
                                     </div>
                                 </div>

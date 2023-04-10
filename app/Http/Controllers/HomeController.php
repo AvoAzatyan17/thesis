@@ -2,15 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\Contracts\ManagerCrudInterface;
 use Illuminate\Contracts\Support\Renderable;
-use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 class HomeController extends Controller
 {
-    public function __construct()
+    private ManagerCrudInterface $managerCrud;
+    public function __construct(ManagerCrudInterface $managerCrud)
     {
         $this->middleware('auth');
+        $this->managerCrud = $managerCrud;
     }
 
     public function index(): Renderable
@@ -20,6 +22,7 @@ class HomeController extends Controller
 
     public function chat(): View
     {
-        return view('chat');
+        $users = $this->managerCrud->list();
+        return view('chat', compact('users'));
     }
 }

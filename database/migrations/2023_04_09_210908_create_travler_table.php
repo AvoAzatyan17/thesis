@@ -13,6 +13,7 @@ return new class extends Migration
             $table->text('name_surname');
             $table->string('passport');
             $table->integer('tour_id');
+            $table->integer('phone');
             $table->integer('user_id');
             $table->boolean('status')->default(false);
             $table->boolean('paid')->default(false);

@@ -33,31 +33,41 @@
                                     </tr>
                                     <tr>
                                         <th>Name</th>
-                                        <th>{{$user->name}}</th>
+                                        <th>{{$user->name_surname}}</th>
                                     </tr>
                                     <tr>
-                                        <th>Email</th>
-                                        <th>{{$user->email}}</th>
+                                        <th>Passport</th>
+                                        <th>{{$user->passport}}</th>
                                     </tr>
                                     <tr>
-                                        <th>Date</th>
-                                        <th>{{$user->created_at}}</th>
+                                        <th>Tour</th>
+                                        <th>
+                                            @foreach($tours as $tour)
+                                                @if($tour->id == $user->tour_id)
+                                                    {{$tour->name}}
+                                                @endif
+                                            @endforeach
+                                        </th>
                                     </tr>
                                     <tr>
                                         <th>Phone</th>
                                         <th>{{$user->phone}}</th>
                                     </tr>
                                     <tr>
-                                        <th>Language</th>
-                                        <th>{{$user->lang}}</th>
+                                        <th>Paid</th>
+                                        <th>
+                                            @if($user->paid == 1)
+                                                <span class="right badge badge-success">Yes</span>
+                                            @else
+                                                <span class="right badge badge-danger">No</span>
+                                            @endif
+                                        </th>
                                     </tr>
                                     <tr>
                                         <th>Status</th>
                                         <th>
                                             @if($user->status == 1)
                                                 <span class="right badge badge-success">Active</span>
-                                            @elseif($user->status == 2)
-                                                <span class="right badge badge-warning">Waiting</span>
                                             @else
                                                 <span class="right badge badge-danger">Blocked</span>
                                             @endif

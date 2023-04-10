@@ -6,6 +6,7 @@ use App\Models\Message;
 use App\Models\Tour;
 use App\Models\User;
 use App\Models\Chat;
+use App\Models\Traveler;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -16,5 +17,6 @@ class DatabaseSeeder extends Seeder
          Chat::factory(10)->create();
          Message::factory(10)->create();
          Tour::factory(10)->create();
+         Traveler::factory(10)->create();
     }
 }

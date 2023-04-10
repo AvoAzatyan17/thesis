@@ -26,7 +26,7 @@
                 <div class="col-md-3">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">List</h3>
+                            <h3 class="card-title">My Chat</h3>
 
                             <div class="card-tools">
                                 <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -36,22 +36,13 @@
                         </div>
                         <div class="card-body p-0">
                             <ul class="nav nav-pills flex-column">
-                                <li class="nav-item active">
-                                    <a href="#" class="nav-link">
-                                        <i class="fas fa-user"></i> Inbox
-                                        <span class="badge bg-primary float-right">12</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="far fa-envelope"></i> Sent
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link active">
-                                        <i class="far fa-file-alt"></i> Drafts
-                                    </a>
-                                </li>
+                                @foreach($users as $user)
+                                    <li class="nav-item ">
+                                        <a href="#" class="nav-link">
+                                            <i class="fas fa-user"></i> {{$user->name}}
+                                        </a>
+                                    </li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>

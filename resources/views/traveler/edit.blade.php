@@ -35,64 +35,49 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="Name">Name</label>
-                                                <input type="text" class="form-control" name="name" id="Name" placeholder="Name" value="{{ $user->name ?? old("name") }}">
+                                                <input type="text" class="form-control" name="name" id="Name" placeholder="Name" value="{{$user->name_surname}}">
+                                                <input type="hidden" name="user_id" value="{{Auth()->user()->id}}">
                                             </div>
                                             @error('name')
                                             <p class="w-100 text-danger">{{ $message }}</p>
                                             @enderror
                                             <div class="form-group">
                                                 <label for="Phone">Phone</label>
-                                                <input type="number" class="form-control" name="phone" id="Phone" placeholder="Phone" value="{{$user->phone ?? old("phone") }}">
+                                                <input type="number" class="form-control" name="phone" id="Phone" placeholder="Phone" value="{{$user->phone}}">
                                             </div>
                                             @error('phone')
                                             <p class="w-100 text-danger">{{ $message }}</p>
                                             @enderror
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="Language">Language</label>
-                                                        <select class="custom-select rounded-0" id="Language" name="lang">
-                                                            <option value="en" @if($user->lang == "en") selected @endif>English</option>
-                                                            <option value="fr" @if($user->lang == "fr") selected @endif>France</option>
-                                                            <option value="hy" @if($user->lang == "hy") selected @endif>Armenian</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="Status">Status</label>
-                                                        <select class="custom-select rounded-0" id="Status" name="status">
-                                                            <option value="active" @if($user->lang == "active") selected @endif>Active</option>
-                                                            <option value="blocked" @if($user->lang == "blocked") selected @endif>Blocked</option>
-                                                            <option value="waiting" @if($user->lang == "waiting") selected @endif>Waiting</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
+                                            <div class="form-group">
+                                                <label for="Paid">Paid</label>
+                                                <select class="custom-select rounded-0" id="Paid" name="paid">
+                                                    <option style="display:none;" selected value="">Choose Paid</option>
+                                                    <option value="1" @if($user->paid == 1) selected @endif>Yes</option>
+                                                    <option value="0" @if($user->paid == 0) selected @endif>No</option>
+                                                </select>
                                             </div>
                                         </div>
+
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label for="exampleInputEmail1">Email address</label>
-                                                <input type="email" name="email" class="form-control"  value="{{$user->email ?? old("email") }}" id="exampleInputEmail1" placeholder="Enter email" autocomplete="new-password">
+                                                <label for="Passport">Passport</label>
+                                                <input type="text" value="{{$user->passport}}" name="passport" class="form-control" id="Passport" placeholder="Passport" autocomplete="new-password">
                                             </div>
-                                            @error('email')
-                                            <p class="w-100 text-danger">{{ $message }}</p>
-                                            @enderror
                                             <div class="form-group">
-                                                <label for="exampleInputPassword1">Password</label>
-                                                <input autocomplete="new-password" name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                                <label for="Paid">Tour</label>
+                                                <select class="custom-select rounded-0" id="Paid" name="tour_id">
+                                                    @foreach($tours as $tour)
+                                                        <option value="{{$tour->id}}" @if($user->tour_id == $tour->id) selected @endif>{{$tour->name}}</option>
+                                                    @endforeach
+                                                </select>
                                             </div>
-                                            @error('password')
-                                            <p class="w-100 text-danger">{{ $message }}</p>
-                                            @enderror
                                             <div class="form-group">
-                                                <label for="ConfirmPassword">Confirm Password</label>
-                                                <input autocomplete="off" type="password" name="password_confirmation" step="1"
-                                                       class="form-control" id="password_confirmation" placeholder="Confirm Password">
+                                                <label for="Status">Status</label>
+                                                <select class="custom-select rounded-0" id="Status" name="status">
+                                                    <option value="1"  @if($user->status == 1) selected @endif>Active</option>
+                                                    <option value="0"  @if($user->status == 0) selected @endif>Blocked</option>
+                                                </select>
                                             </div>
-                                            @error('password_confirmation')
-                                            <p class="w-100 text-danger">{{ $message }}</p>
-                                            @enderror
                                         </div>
                                     </div>
                                 </div>

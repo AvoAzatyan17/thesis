@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Admin\AccountingStoreRequest;
-use App\Services\Contracts\AccountingCrudInterface;
+use App\Services\Contracts\ToursCrudInterface;
 use App\Services\Contracts\TravelerCrudInterface;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
@@ -11,21 +11,25 @@ use Illuminate\View\View;
 class TravelerController extends Controller
 {
     private TravelerCrudInterface $travelerCrud;
+    private ToursCrudInterface $tourCrud;
 
-    public function __construct(TravelerCrudInterface $travelerCrud)
+    public function __construct(TravelerCrudInterface $travelerCrud,ToursCrudInterface $tourCrud)
     {
         $this->travelerCrud = $travelerCrud;
+        $this->tourCrud = $tourCrud;
     }
 
     public function index(): View
     {
         $users = $this->travelerCrud->list();
-        return view('/traveler/list', compact('users'));
+        $tours = $this->tourCrud->list();
+        return view('/traveler/list', compact('users','tours'));
     }
 
     public function create(): View
     {
-        return view('/traveler/create');
+        $tours = $this->tourCrud->list();
+        return view('/traveler/create', compact('tours'));
     }
 
     public function store(AccountingStoreRequest $request): RedirectResponse
@@ -37,13 +41,15 @@ class TravelerController extends Controller
     public function show(int $id): View
     {
         $user = $this->travelerCrud->show($id);
-        return view('/traveler/show', compact('user'));
+        $tours = $this->tourCrud->list();
+        return view('/traveler/show', compact('user','tours'));
     }
 
     public function edit(int $id): View
     {
         $user = $this->travelerCrud->edit($id);
-        return view('/traveler/edit', compact('user'));
+        $tours = $this->tourCrud->list();
+        return view('/traveler/edit', compact('user','tours'));
     }
 
     public function update(AccountingStoreRequest $request, int $id): RedirectResponse

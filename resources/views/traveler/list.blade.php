@@ -34,9 +34,11 @@
                                     <tr>
                                         <th>ID</th>
                                         <th>Name</th>
-                                        <th>Email</th>
-                                        <th>Date</th>
+                                        <th>Passport</th>
+                                        <th>Tour</th>
+                                        <th>User</th>
                                         <th>Status</th>
+                                        <th>Paid</th>
                                         <th>Action</th>
                                     </tr>
                                     </thead>
@@ -44,14 +46,28 @@
                                     @foreach($users as $user)
                                         <tr>
                                             <td>{{$user->id}}</td>
-                                            <td>{{$user->name}}</td>
-                                            <td>{{$user->email}}</td>
-                                            <td>{{$user->created_at}}</td>
+                                            <td>{{$user->name_surname}}</td>
+                                            <td>{{$user->passport}}</td>
+                                            <td>
+                                                @foreach($tours as $tour)
+                                                    @if($tour->id == $user->tour_id)
+                                                        {{$tour->name}}
+                                                    @endif
+                                                @endforeach
+                                            </td>
+                                            <td>{{$user->user_id}}</td>
                                             <td>
                                                 @if($user->status == 1)
                                                     <span class="right badge badge-success">Active</span>
                                                 @else
                                                     <span class="right badge badge-danger">Blocked</span>
+                                                @endif
+                                            </td>
+                                            <td>
+                                                @if($user->paid == 1)
+                                                    <span class="right badge badge-success">Yes</span>
+                                                @else
+                                                    <span class="right badge badge-danger">No</span>
                                                 @endif
                                             </td>
                                             <td class="project-actions">
